@@ -1,23 +1,22 @@
 import React from 'react';
 
-import { NavbarHeader } from './navbar.style';
+import { StyledHeader, StyledLogo, StyledLink, StyledNav, StyledUl, StyledLi, StyledSpacer } from './navbar.style';
 
 const Navbar = () => (
-    <NavbarHeader>
-      <nav>
-        <div></div>
-        <div>
-          <a>Logo Here</a>
-        </div>
-        <div>
-          <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-          </ul>
-        </div>
-      </nav>
-    </NavbarHeader>
+  <StyledHeader>
+    <StyledNav>
+      <div></div>
+      <StyledLogo to="/">THE LOGO</StyledLogo>
+      <StyledSpacer />
+      <div>
+        <StyledUl>
+          <StyledLi><StyledLink to="/">Home</StyledLink></StyledLi>
+          <StyledLi><StyledLink to="/contact">Contact</StyledLink></StyledLi>
+          <StyledLi><StyledLink to="/about">About</StyledLink></StyledLi>
+        </StyledUl>
+      </div>
+    </StyledNav>
+  </StyledHeader>
 )
 
 export default Navbar;
