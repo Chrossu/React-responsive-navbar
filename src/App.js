@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import './App.css'
@@ -13,12 +13,13 @@ import HomePage from './pages/homepage/Homepage.component';
 import Contact from './pages/contact/Contact.component';
 import About from './pages/about/About.component';
 
-function App() {
+const App = () => {
+  const [sideDrawOpen, setSideDrawOpen] = useState(false);
   return (
     <Fragment>
       <Navbar />
-      <SideDraw />
-      <Backdrop />
+      {sideDrawOpen && <SideDraw />}
+      {sideDrawOpen && <Backdrop />}
       {/* React Router DOM Routes */}
       <Switch>
         <Route exact path="/" component={HomePage} />
