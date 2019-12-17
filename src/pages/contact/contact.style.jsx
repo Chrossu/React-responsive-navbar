@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const StyledHomepageContainer = styled.div`
+export const StyledContactContainer = styled.div`
   margin-top: 64px;
 `

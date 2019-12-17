@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { HomepageContainer } from './homepage.style';
+import { StyledHomepageContainer } from './homepage.style';
 
 const HomePage = () => (
-  <HomepageContainer>
+  <StyledHomepageContainer>
     <p>Miau guau!</p>
-  </HomepageContainer>
+  </StyledHomepageContainer>
 )
 
 export default HomePage;
