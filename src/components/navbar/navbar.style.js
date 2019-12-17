@@ -22,11 +22,13 @@ export const StyledLogo = styled(Link)`
   color: #fff;
   text-decoration: none;
   font-size: 1.5rem;
+  margin-left: 1rem;
 `;
 
 export const StyledLink = styled(Link)`
   color: #fff;
   text-decoration: none;
+  font-size: 1rem;
 
   &:hover {
     color: #fa923f;
@@ -35,7 +37,6 @@ export const StyledLink = styled(Link)`
 
 export const StyledUl = styled.ul`
   display: flex;
-  justify-content: space-between;
   list-style: none;
 `;
 
