@@ -9,8 +9,8 @@ import { StyledHeader, StyledLogo, StyledLink, StyledNav, StyledUl, StyledLi, St
 const Navbar = ({ toggleSideDraw }) => (
   <StyledHeader>
     <StyledNav>
-      <div>
-        <Burger onClick={toggleSideDraw} />
+      <div onClick={toggleSideDraw}>
+        <Burger />
       </div>
       <StyledLogo to="/">THE LOGO</StyledLogo>
       <StyledSpacer />
