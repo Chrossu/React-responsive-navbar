@@ -1,4 +1,5 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
+import { connect } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
 
 import './App.css'
@@ -13,13 +14,12 @@ import HomePage from './pages/homepage/Homepage.component';
 import Contact from './pages/contact/Contact.component';
 import About from './pages/about/About.component';
 
-const App = () => {
-  const [sideDrawOpen, setSideDrawOpen] = useState(false);
+const App = ({ isSideDraw }) => {
   return (
     <Fragment>
       <Navbar />
-      {sideDrawOpen && <SideDraw />}
-      {sideDrawOpen && <Backdrop />}
+      {isSideDraw && <SideDraw />}
+      {isSideDraw && <Backdrop />}
       {/* React Router DOM Routes */}
       <Switch>
         <Route exact path="/" component={HomePage} />
@@ -30,4 +30,8 @@ const App = () => {
   )
 }
 
-export default App;
+const mapStateToProps = state => ({
+  isSideDraw: state.sidedraw.sideDrawOpen
+})
+
+export default connect(mapStateToProps)(App);
