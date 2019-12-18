@@ -10,7 +10,7 @@ export const StyledToggleButton = styled.button`
   border: none;
   cursor: pointer;
 
-  &:focus {
+  &:active, &:focus {
     outline: none;
   }
 `;

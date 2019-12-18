@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 import Burger from './burger/Burger.component';
 import { toggleSideDraw } from '../../redux/sidedraw/sidedraw.actions';
 
-import { StyledHeader, StyledLogo, StyledLink, StyledNav, StyledUl, StyledLi, StyledSpacer } from './navbar.style';
+import { StyledHeader, StyledLogo, StyledLink, StyledNav, StyledUl, StyledLi, StyledSpacer, StyledDiv } from './navbar.style';
 
 const Navbar = ({ toggleSideDraw }) => (
   <StyledHeader>
     <StyledNav>
-      <div onClick={toggleSideDraw}>
+      <StyledDiv onClick={toggleSideDraw}>
         <Burger />
-      </div>
+      </StyledDiv>
       <StyledLogo to="/">THE LOGO</StyledLogo>
       <StyledSpacer />
       <div>

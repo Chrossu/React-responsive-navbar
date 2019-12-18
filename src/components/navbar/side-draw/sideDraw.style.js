@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
+import { ReactComponent as CloseIcon } from '../../../assets/close.svg';
 
 export const StyledNav = styled.div`
   height: 100%;
@@ -34,4 +35,12 @@ export const StyledLink = styled(Link)`
   &:hover, &:active {
     color: #fa923f;
   }
+`;
+
+export const StyledClose = styled(CloseIcon)`
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 `;

@@ -47,3 +47,9 @@ export const StyledLi = styled.li`
 export const StyledSpacer = styled.div`
   flex: 1;
 `
+
+export const StyledDiv = styled.div`
+  &:active, &:focus {
+    outline: none;
+  }
+`;

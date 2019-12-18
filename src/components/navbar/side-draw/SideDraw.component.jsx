@@ -1,14 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-import { StyledNav, StyledUl, StyledLi, StyledLink } from './sideDraw.style';
+import { toggleSideDraw } from '../../../redux/sidedraw/sidedraw.actions';
 
-const SideDraw = () => (
+import { StyledNav, StyledUl, StyledLi, StyledLink, StyledClose } from './sideDraw.style';
+
+const SideDraw = ({ toggleSideDraw }) => (
     <StyledNav>
       <StyledUl>
+        <StyledClose onClick={toggleSideDraw} />
         <StyledLi><StyledLink to="/">Products</StyledLink></StyledLi>
         <StyledLi><StyledLink to="/">Users</StyledLink></StyledLi>
       </StyledUl>
     </StyledNav>
 )
 
-export default SideDraw;
+export default connect(null, { toggleSideDraw })(SideDraw);
