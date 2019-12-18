@@ -23,6 +23,10 @@ export const StyledLogo = styled(Link)`
   text-decoration: none;
   font-size: 1.3rem;
   margin-left: 1rem;
+
+  @media (min-width: 560px) {
+    margin-left: 0;
+  }
 `;
 
 export const StyledLink = styled(Link)`
@@ -38,6 +42,10 @@ export const StyledLink = styled(Link)`
 export const StyledUl = styled.ul`
   display: flex;
   list-style: none;
+
+  @media (max-width: 560px) {
+    display: none;
+  }
 `;
 
 export const StyledLi = styled.li`

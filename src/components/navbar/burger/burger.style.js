@@ -13,6 +13,10 @@ export const StyledToggleButton = styled.button`
   &:active, &:focus {
     outline: none;
   }
+  
+  @media (min-width: 560px) {
+    display: none;
+  }
 `;
 
 export const StyledDivLine = styled.div`
