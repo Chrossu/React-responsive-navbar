@@ -21,7 +21,7 @@ export const StyledNav = styled.nav`
 export const StyledLogo = styled(Link)`
   color: #fff;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-left: 1rem;
 `;
 

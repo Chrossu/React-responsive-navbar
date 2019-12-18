@@ -14,12 +14,12 @@ import HomePage from './pages/homepage/Homepage.component';
 import Contact from './pages/contact/Contact.component';
 import About from './pages/about/About.component';
 
-const App = ({ isSideDraw }) => {
+const App = ({ isHidden }) => {
   return (
     <Fragment>
       <Navbar />
-      {isSideDraw && <SideDraw />}
-      {isSideDraw && <Backdrop />}
+      <SideDraw />
+      <Backdrop />
       {/* React Router DOM Routes */}
       <Switch>
         <Route exact path="/" component={HomePage} />
@@ -31,7 +31,7 @@ const App = ({ isSideDraw }) => {
 }
 
 const mapStateToProps = state => ({
-  isSideDraw: state.sidedraw.sideDrawOpen
+  isHidden: state.sidedraw.isSideDrawOpen
 })
 
 export default connect(mapStateToProps)(App);

@@ -5,8 +5,12 @@ import { toggleSideDraw } from '../../../redux/sidedraw/sidedraw.actions';
 
 import { StyledBackdrop } from './backdrop.style';
 
-const Backdrop = ({ toggleSideDraw }) => (
-    <StyledBackdrop onClick={toggleSideDraw} />
+const Backdrop = ({ toggleSideDraw, isHidden }) => (
+    <StyledBackdrop onClick={() => isHidden && toggleSideDraw} isHidden={isHidden} />
 )
 
-export default connect(null, { toggleSideDraw })(Backdrop);
+const mapStateToProps = state => ({
+    isHidden: state.sidedraw.isSideDrawOpen
+})
+
+export default connect(mapStateToProps, { toggleSideDraw })(Backdrop);

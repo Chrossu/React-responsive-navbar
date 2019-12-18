@@ -6,7 +6,7 @@ import { ReactComponent as CloseIcon } from '../../../assets/close.svg';
 export const StyledNav = styled.div`
   height: 100%;
   background: white;
-  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
@@ -14,6 +14,8 @@ export const StyledNav = styled.div`
   max-width: 400px;
   z-index: 200;
   padding: 1rem 1.25rem;
+  transform: ${({ isHidden }) => isHidden ? 'translateX(0)' : 'translateX(-120%)'};
+  transition: transform 0.4s ease-out;
 `;
 
 export const StyledUl = styled.ul`

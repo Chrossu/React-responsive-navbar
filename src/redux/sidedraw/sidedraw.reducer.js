@@ -1,7 +1,7 @@
 import { TOGGLE_SIDEDRAW } from './sidedraw.types';
 
 const initialState = {
-  sideDrawOpen: false
+  isSideDrawOpen: false
 }
 
 export default (state = initialState, action) => {
@@ -9,7 +9,7 @@ export default (state = initialState, action) => {
     case TOGGLE_SIDEDRAW:
       return {
         ...state,
-        sideDrawOpen: !state.sideDrawOpen
+        isSideDrawOpen: !state.isSideDrawOpen
       }
     default:
       return state
